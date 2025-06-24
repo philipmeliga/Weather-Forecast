@@ -1,7 +1,7 @@
 const cityInput = document.getElementById('city');
 const getWeatherButton = document.getElementById('get-weather');
 const weatherDataContainer = document.getElementById('weather-data');
-const apiKey = '7ac5b0fab4797b6d7993640487fc489a'; // Replace with your API key
+const apiKey = '7ac5b0fab4797b6d7993640487fc489a';
 
 getWeatherButton.addEventListener('click', getWeather);
 
@@ -15,14 +15,14 @@ function getWeather() {
                 if (data.cod === '404') {
                     weatherDataContainer.innerHTML = 'City not found';
                 } else {
-                    const weatherData = `//api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+                    const weatherData = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 if (data.cod === '404') {
                     weatherDataContainer.innerHTML = 'City not found';
                 } else {
-                    const weatherData = `
+                    const weatherData = ``https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
                         <h2>Weather in ${data.name}</h2>
                         <p>Temperature: ${data.main.temp}°C</p>
                         <p>Humidity: ${data.main.humidity}%</p>
