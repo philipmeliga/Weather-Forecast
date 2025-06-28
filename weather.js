@@ -6,7 +6,7 @@ const weatherData = document.getElementById('weather-data');
 
 const apiKey = '7ac5b0fab4797b6d7993640487fc489a'; 
 - 
-searchBtn.addEventListener('click', fetchWeatherData);
+searchBtn.addEventListener('click', fetchWeatherData() );
 
 function fetchWeatherData() {
     const city = cityInput.value.trim();
